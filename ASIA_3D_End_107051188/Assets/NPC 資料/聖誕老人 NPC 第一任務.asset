@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c8d63bdb73b30943bd76f2b3880521b, type: 3}
+  m_Name: "\u8056\u8A95\u8001\u4EBA NPC \u7B2C\u4E00\u4EFB\u52D9"
+  m_EditorClassIdentifier: 
+  dialougA: "merry   christmas!\u662F\u4F86\u6D88\u9664\u602A\u7269\u7684\u5C11\u5973\u55CE?\n\u77E5\u9053\u4E86,\u5B8C\u6210\u4EFB\u52D9\u5F8C\u4F86\u627E\u6211\u62FF\u8056\u8A95\u79AE\u7269\u3105!\u0669(\u02CA\u15DC\u25BD\u02CB*)\u0648"
+  dialougB: "merry   christmas!\u662F\u4F86\u6D88\u9664\u602A\u7269\u7684\u5C11\u5973\u55CE?\n\u77E5\u9053\u4E86,\u5B8C\u6210\u4EFB\u52D9\u5F8C\u4F86\u627E\u6211\u62FF\u8056\u8A95\u79AE\u7269\u3105!\u0669(\u02CA\u15DC\u25BD\u02CB*)\u0648"
+  dialougC: "merry   christmas!\u662F\u4F86\u6D88\u9664\u602A\u7269\u7684\u5C11\u5973\u55CE?\n\u77E5\u9053\u4E86,\u5B8C\u6210\u4EFB\u52D9\u5F8C\u4F86\u627E\u6211\u62FF\u8056\u8A95\u79AE\u7269\u3105!\u0669(\u02CA\u15DC\u25BD\u02CB*)\u0648"
