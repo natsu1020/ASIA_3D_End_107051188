@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using Invector.vCharacterController;
 
 public class Player : MonoBehaviour
 {
-    private float hp = 100;
+
     private Animator ani;
 
     private int atkCount;
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
     public float atkLength;
     [Header("攻擊力"), Range(0, 500)]
     public float atk = 30;
+    public GameObject final;
 
     private void Awake()
     {
@@ -35,6 +37,7 @@ public class Player : MonoBehaviour
     }
 
     private RaycastHit hit;
+    public float hp = 100;
     private void Attack()
     {
         if (atkCount < 3)
@@ -68,16 +71,21 @@ public class Player : MonoBehaviour
         ani.SetTrigger("受傷觸發");
 
         if (hp <= 0) Dead();
-      
+        {
+            final.SetActive(true);
+        }
 
     }
 
     private void Dead()
     {
-        ani.SetTrigger("死亡觸發");
+        ani.SetBool("死亡開關", true);
        vThirdPersonController vt =  GetComponent<vThirdPersonController>();
         vt.lockMovement = true;
         vt.lockRotation = true;
+        enabled = false;
+
+
     }
 
 

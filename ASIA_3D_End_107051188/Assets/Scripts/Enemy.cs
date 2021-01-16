@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     public float atkLength;
     [Header("攻擊力"), Range(0, 500)]
     public float atk = 30;
+    public GameObject final;
+
 
 
     private Transform player;
@@ -71,7 +73,7 @@ public class Enemy : MonoBehaviour
                 ani.SetTrigger("攻擊觸發");
                 timer = 0;
 
-                if (Physics.Raycast(atkPoint.position, atkPoint.forward, out hit, atkLength, 1 << 8)) ;
+                if (Physics.Raycast(atkPoint.position, atkPoint.forward, out hit, atkLength, 1 << 8));
                 {
                     hit.collider.GetComponent<Player>().Damage(atk);
                 }
@@ -87,7 +89,10 @@ public class Enemy : MonoBehaviour
         ani.SetTrigger("受傷觸發");
 
         if (hp <= 0) Dead();
-
+        {
+            final.SetActive(true);
+        }
+        
 
     }
     private void Dead()
