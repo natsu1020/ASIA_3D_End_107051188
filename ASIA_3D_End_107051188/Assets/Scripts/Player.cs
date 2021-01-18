@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
 
     private float timer;
     [Header("連續間隔時間"), Range(0, 3)]
+    private float timerDead = 0;
+    [Header("死亡時間"), Range(0, 5)]
     public float interval = 1;
     [Header("攻擊中心點")]
     public Transform atkPoint;
@@ -72,10 +74,10 @@ public class Player : MonoBehaviour
 
         if (hp <= 0) Dead();
         {
-            final.SetActive(true);
         }
 
     }
+
 
     private void Dead()
     {
@@ -84,7 +86,13 @@ public class Player : MonoBehaviour
         vt.lockMovement = true;
         vt.lockRotation = true;
         enabled = false;
-
+        timerDead += Time.deltaTime;
+        if  (timerDead < 5)
+        {
+           
+                final.SetActive(true);
+            timerDead = 0;
+        }
 
     }
 
